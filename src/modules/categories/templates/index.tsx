@@ -38,7 +38,7 @@ export default function CategoryTemplate({
 
   return (
     <div
-      className="flex flex-col small:flex-row small:items-start py-6 content-container"
+      className="flex flex-col small:flex-row small:items-start py-6 content-container bg-beige rounded-2xl shadow-lg"
       data-testid="category-container"
     >
       <RefinementList sortBy={sort} data-testid="sort-by-container" />
@@ -57,7 +57,9 @@ export default function CategoryTemplate({
                 /
               </span>
             ))}
-          <h1 data-testid="category-page-title">{category.name}</h1>
+          <h1 className="text-choco" data-testid="category-page-title">
+            {category.name}
+          </h1>
         </div>
         {category.description && (
           <div className="mb-8 text-base-regular">

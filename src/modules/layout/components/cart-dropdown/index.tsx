@@ -79,7 +79,7 @@ const CartDropdown = ({
       <Popover className="relative h-full">
         <PopoverButton className="h-full">
           <LocalizedClientLink
-            className="text-xl font-semibold text-black hover:text-gray-900 transition ease-out duration-200"
+            className="text-xl font-semibold text-black hover:text-choco transition ease-out duration-200"
             href="/cart"
             data-testid="nav-cart-link"
           >{`Корзина`}</LocalizedClientLink>
@@ -96,7 +96,7 @@ const CartDropdown = ({
         >
           <PopoverPanel
             static
-            className="hidden small:block absolute top-[calc(100%+1px)] right-0 w-[420px] bg-white rounded-2xl shadow-xl p-6 flex flex-col gap-6"
+            className="hidden small:block absolute top-[calc(100%+1px)] right-0 w-[420px] bg-cream rounded-2xl shadow-xl p-6 flex flex-col gap-6"
             data-testid="nav-cart-dropdown"
           >
             <div className="flex items-center justify-center">

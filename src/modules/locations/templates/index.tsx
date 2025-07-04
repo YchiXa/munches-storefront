@@ -83,16 +83,16 @@ const LocationsTemplate: React.FC = () => {
             {locations.map((loc) => (
               <li
                 key={loc.id}
-                className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow"
+                className="bg-cream p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow"
               >
                 <h2 className="text-2xl font-semibold text-choco mb-2">
                   {loc.name}
                 </h2>
-                <p className="text-gray-600">{loc.address}</p>
+                <p className="text-choco/80">{loc.address}</p>
               </li>
             ))}
           </ul>
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div className="bg-cream rounded-2xl shadow-lg overflow-hidden">
             <div ref={mapRef} className="w-full h-80" />
           </div>
         </div>
