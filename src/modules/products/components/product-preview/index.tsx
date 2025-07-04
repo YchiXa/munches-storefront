@@ -1,5 +1,4 @@
 import { Text } from "@medusajs/ui"
-import { listProducts } from "@lib/data/products"
 import { getProductPrice } from "@lib/util/get-product-price"
 import { HttpTypes } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
@@ -15,38 +14,37 @@ export default async function ProductPreview({
   isFeatured?: boolean
   region: HttpTypes.StoreRegion
 }) {
-  // const pricedProduct = await listProducts({
-  //   regionId: region.id,
-  //   queryParams: { id: [product.id!] },
-  // }).then(({ response }) => response.products[0])
-
-  // if (!pricedProduct) {
-  //   return null
-  // }
-
-  const { cheapestPrice } = getProductPrice({
-    product,
-  })
+  const { cheapestPrice } = getProductPrice({ product })
 
   return (
-    <LocalizedClientLink href={`/products/${product.handle}`} className="group">
+    <LocalizedClientLink
+      href={`/products/${product.handle}`}
+      className="group block"
+    >
       <div
         data-testid="product-wrapper"
-        className="bg-cream rounded-2xl shadow-lg p-4 flex flex-col gap-3 hover:shadow-xl transition"
+        className="bg-cream rounded-2xl shadow-md p-4 flex flex-col gap-4 hover:shadow-lg transition-shadow duration-200 mobile:w-full sm:w-auto"
       >
         <Thumbnail
           thumbnail={product.thumbnail}
           images={product.images}
           size="full"
           isFeatured={isFeatured}
+          className="rounded-xl overflow-hidden"
         />
-        <div className="flex txt-compact-medium mt-4 justify-between">
-          <Text className="text-ui-fg-subtle" data-testid="product-title">
+
+        <div className="flex flex-col mobile:gap-2 sm:flex-row sm:justify-between sm:items-center">
+          <Text
+            className="text-base font-semibold text-choco truncate"
+            data-testid="product-title"
+          >
             {product.title}
           </Text>
-          <div className="flex items-center gap-x-2">
-            {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
-          </div>
+          {cheapestPrice && (
+            <div className="mt-2 sm:mt-0">
+              <PreviewPrice price={cheapestPrice} />
+            </div>
+          )}
         </div>
       </div>
     </LocalizedClientLink>

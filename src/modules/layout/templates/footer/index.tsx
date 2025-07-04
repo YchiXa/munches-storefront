@@ -7,7 +7,6 @@ export default async function Footer() {
   const { collections } = await listCollections({ fields: "*products" })
   const productCategories = await listCategories()
 
-  // сформируем группы ссылок
   const row1 = [
     {
       title: "Категории",
@@ -25,7 +24,7 @@ export default async function Footer() {
 
   const row2 = [
     {
-      title: "munchy",
+      title: "Munchy",
       items: [
         { name: "История", href: "/" },
         { name: "Планы", href: "/" },
@@ -35,42 +34,38 @@ export default async function Footer() {
   ]
 
   return (
-    <footer className="w-full">
-      {/* Верхний белый блок */}
-      <div className="bg-cream w-full border-t border-choco/30 rounded-2xl">
-        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-            {row1.concat(row2).map((group) => (
-              <div key={group.title} className="space-y-4">
-                <Text className="block text-sm font-semibold uppercase tracking-wider text-choco">
-                  {group.title}
-                </Text>
-                <ul className="space-y-2">
-                  {group.items.map((item) => (
-                    <li key={item.href}>
-                      <LocalizedClientLink
-                        href={item.href}
-                        className="text-base text-choco/80 hover:text-primary transition-colors duration-200"
-                      >
-                        {item.name}
-                      </LocalizedClientLink>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+    <footer className="w-full bg-cream">
+      {/* Верхний блок */}
+      <div className="max-w-7xl mx-auto py-12 px-6 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
+          {row1.concat(row2).map((group) => (
+            <div key={group.title} className="space-y-3">
+              <Text className="block text-sm font-semibold uppercase tracking-wider text-choco">
+                {group.title}
+              </Text>
+              <ul className="space-y-2">
+                {group.items.map((item) => (
+                  <li key={item.href}>
+                    <LocalizedClientLink
+                      href={item.href}
+                      className="block text-base text-choco/80 hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-300"
+                    >
+                      {item.name}
+                    </LocalizedClientLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* Нижний розовый блок */}
-      <div className="bg-primary w-full">
-        <div className="content-container py-16 flex flex-col items-center gap-y-4">
-          <h1 className="text-[5rem] font-black leading-none">munchy</h1>
-          <div className="flex items-center gap-x-4 text-choco text-sm">
-            <span>
-              © {new Date().getFullYear()} munchy. Все права защищены.
-            </span>
+      {/* Нижний блок */}
+      <div className="bg-primary py-12">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <h2 className="text-4xl sm:text-5xl font-black text-choco leading-none">Munchy</h2>
+          <div className="text-sm text-choco">
+            © {new Date().getFullYear()} Munchy. Все права защищены.
           </div>
         </div>
       </div>
