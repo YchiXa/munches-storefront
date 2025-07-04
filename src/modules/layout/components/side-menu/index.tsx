@@ -82,7 +82,7 @@ const SideMenu = ({ regions }: SideMenuProps) => {
                           href={href}
                           onClick={close}
                           data-testid={`${name.toLowerCase()}-link`}
-                          className="text-xl sm:text-2xl font-bold text-gray-800 hover:text-[#feb9cc] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-400 transition ease-out duration-200"
+                          className="text-xl sm:text-2xl font-bold text-gray-800 hover:text-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-400 transition ease-out duration-200"
                         >
                           {name}
                         </LocalizedClientLink>

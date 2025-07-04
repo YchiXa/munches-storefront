@@ -73,9 +73,9 @@ const LocationsTemplate: React.FC = () => {
   }, [])
 
   return (
-    <section className="bg-rose-50 py-12">
+    <section className="bg-beige py-12">
       <div className="max-w-5xl mx-auto px-4">
-        <h1 className="text-4xl font-bold text-rose-600 mb-8 text-center">
+        <h1 className="text-4xl font-bold text-choco mb-8 text-center">
           Где найти наши заведения
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -85,7 +85,7 @@ const LocationsTemplate: React.FC = () => {
                 key={loc.id}
                 className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow"
               >
-                <h2 className="text-2xl font-semibold text-rose-700 mb-2">
+                <h2 className="text-2xl font-semibold text-choco mb-2">
                   {loc.name}
                 </h2>
                 <p className="text-gray-600">{loc.address}</p>
