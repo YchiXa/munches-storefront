@@ -1,35 +1,25 @@
-import { Github } from "@medusajs/icons"
-import { Button, Heading } from "@medusajs/ui"
+import { Heading } from "@medusajs/ui"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
 const Hero = () => {
   return (
-    <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
-      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6">
-        <span>
-          <Heading
-            level="h1"
-            className="text-3xl leading-10 text-ui-fg-base font-normal"
-          >
-            Стартовый шаблон электронной коммерции
-          </Heading>
-          <Heading
-            level="h2"
-            className="text-3xl leading-10 text-ui-fg-subtle font-normal"
-          >
-            Работает на Medusa и Next.js
-          </Heading>
-        </span>
-        <a
-          href="https://github.com/medusajs/nextjs-starter-medusa"
-          target="_blank"
-        >
-          <Button variant="secondary">
-            Посмотреть на GitHub
-            <Github />
-          </Button>
-        </a>
-      </div>
-    </div>
+    <section className="h-[70vh] w-full bg-primary flex flex-col justify-center items-center text-center gap-6 px-4">
+      <Heading
+        level="h1"
+        className="text-5xl sm:text-7xl font-fredoka-bold text-choco drop-shadow"
+      >
+        munchy
+      </Heading>
+      <p className="text-lg sm:text-2xl text-choco max-w-md">
+        Самые вкусные десерты рядом с вами
+      </p>
+      <LocalizedClientLink
+        href="/store"
+        className="px-6 py-3 rounded-2xl bg-choco text-white text-xl hover:bg-opacity-80 transition"
+      >
+        Смотреть меню
+      </LocalizedClientLink>
+    </section>
   )
 }
 

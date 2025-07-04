@@ -50,7 +50,7 @@ export default async function Footer() {
                     <li key={item.href}>
                       <LocalizedClientLink
                         href={item.href}
-                        className="text-base text-gray-600 hover:text-[#feb9cc] transition-colors duration-200"
+                        className="text-base text-gray-600 hover:text-primary transition-colors duration-200"
                       >
                         {item.name}
                       </LocalizedClientLink>
@@ -64,7 +64,7 @@ export default async function Footer() {
       </div>
 
       {/* Нижний розовый блок */}
-      <div className="bg-[#feb9cc] w-full">
+      <div className="bg-primary w-full">
         <div className="content-container py-16 flex flex-col items-center gap-y-4">
           <h1 className="text-[5rem] font-black leading-none">munchy</h1>
           <div className="flex items-center gap-x-4 text-gray-800 text-sm">
