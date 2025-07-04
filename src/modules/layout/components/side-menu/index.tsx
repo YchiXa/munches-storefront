@@ -46,7 +46,7 @@ const SideMenu = ({ regions }: SideMenuProps) => {
                 leaveTo="opacity-0"
               >
                 <PopoverPanel
-                  className="absolute inset-x-0 m-2 max-h-[calc(100vh-1rem)] w-full sm:w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4 bg-white rounded-2xl shadow-xl p-8 pt-safe-top pb-safe-bottom flex flex-col justify-between gap-6 z-30 overflow-y-auto"
+                  className="absolute inset-x-0 m-2 max-h-[calc(100vh-1rem)] w-full sm:w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4 bg-cream rounded-2xl shadow-xl p-8 pt-safe-top pb-safe-bottom flex flex-col justify-between gap-6 z-30 overflow-y-auto"
                   data-testid="nav-menu-popup"
                 >
                   {/* Close button */}
@@ -56,7 +56,7 @@ const SideMenu = ({ regions }: SideMenuProps) => {
                     </a>
                     <button
                       onClick={close}
-                      className="p-2 rounded-full bg-white transition ease-out duration-200 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"
+                      className="p-2 rounded-full bg-cream transition ease-out duration-200 hover:bg-beige focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-choco"
                       data-testid="close-menu-button"
                     >
                       <svg
@@ -82,7 +82,7 @@ const SideMenu = ({ regions }: SideMenuProps) => {
                           href={href}
                           onClick={close}
                           data-testid={`${name.toLowerCase()}-link`}
-                          className="text-xl sm:text-2xl font-bold text-gray-800 hover:text-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-400 transition ease-out duration-200"
+                          className="text-xl sm:text-2xl font-bold text-gray-800 hover:text-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-choco transition ease-out duration-200"
                         >
                           {name}
                         </LocalizedClientLink>

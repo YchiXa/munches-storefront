@@ -37,7 +37,7 @@ export default async function Footer() {
   return (
     <footer className="w-full">
       {/* Верхний белый блок */}
-      <div className="bg-white w-full border-t border-gray-200">
+      <div className="bg-cream w-full border-t border-gray-200 rounded-2xl">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {row1.concat(row2).map((group) => (
