@@ -34,6 +34,10 @@ module.exports = {
           80: "#1F2937",
           90: "#111827",
         },
+        primary: "#feb9cc",
+        beige: "#fdf1e1",
+        choco: "#6b3d2e",
+        cream: "#fff4e6",
       },
       borderRadius: {
         none: "0px",
@@ -41,6 +45,7 @@ module.exports = {
         base: "4px",
         rounded: "8px",
         large: "16px",
+        "2xl": "1rem",
         circle: "9999px",
       },
       maxWidth: {

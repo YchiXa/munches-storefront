@@ -79,7 +79,7 @@ const CartDropdown = ({
       <Popover className="relative h-full">
         <PopoverButton className="h-full">
           <LocalizedClientLink
-            className="text-xl font-semibold text-black hover:text-gray-900 transition ease-out duration-200"
+            className="text-xl font-semibold text-black hover:text-choco transition ease-out duration-200"
             href="/cart"
             data-testid="nav-cart-link"
           >{`Корзина`}</LocalizedClientLink>
@@ -96,7 +96,7 @@ const CartDropdown = ({
         >
           <PopoverPanel
             static
-            className="hidden small:block absolute top-[calc(100%+1px)] right-0 w-[420px] bg-white rounded-2xl shadow-xl p-6 flex flex-col gap-6"
+            className="hidden small:block absolute top-[calc(100%+1px)] right-0 w-[420px] bg-cream rounded-2xl shadow-xl p-6 flex flex-col gap-6"
             data-testid="nav-cart-dropdown"
           >
             <div className="flex items-center justify-center">
@@ -113,7 +113,7 @@ const CartDropdown = ({
                     })
                     .map((item) => (
                       <div
-                        className="grid grid-cols-[100px_1fr] gap-6 bg-pink-50 rounded-2xl p-6 shadow-lg"
+                        className="grid grid-cols-[100px_1fr] gap-6 bg-beige rounded-2xl p-6 shadow-lg"
                         key={item.id}
                         data-testid="cart-item"
                       >
@@ -158,7 +158,7 @@ const CartDropdown = ({
                             />
                             <DeleteButton
                               id={item.id}
-                              className="rounded-full p-2 hover:bg-pink-100 transition ease-out duration-200"
+                              className="rounded-full p-2 hover:bg-cream transition ease-out duration-200"
                               data-testid="cart-item-remove-button"
                             >
                               Удалить
@@ -186,7 +186,7 @@ const CartDropdown = ({
                   </div>
                   <LocalizedClientLink href="/cart" passHref>
                     <Button
-                      className="w-full rounded-2xl bg-[#feb9cc] text-white hover:bg-opacity-90 transition ease-out duration-200"
+                      className="w-full rounded-2xl bg-primary text-white hover:bg-opacity-90 transition ease-out duration-200"
                       size="large"
                       data-testid="go-to-cart-button"
                     >
@@ -197,14 +197,14 @@ const CartDropdown = ({
               </>
             ) : (
               <div className="flex flex-col items-center justify-center gap-4 py-16">
-                <div className="bg-[#feb9cc] text-white w-8 h-8 flex items-center justify-center rounded-full">
+                <div className="bg-primary text-white w-8 h-8 flex items-center justify-center rounded-full">
                   <span>0</span>
                 </div>
                 <span className="text-base">Ваша корзина пуста.</span>
                 <LocalizedClientLink href="/store">
                   <Button
                     onClick={close}
-                    className="rounded-2xl bg-[#feb9cc] text-white hover:bg-opacity-90 transition ease-out duration-200"
+                    className="rounded-2xl bg-primary text-white hover:bg-opacity-90 transition ease-out duration-200"
                   >
                     Посмотреть продукты
                   </Button>

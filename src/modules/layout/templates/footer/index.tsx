@@ -37,12 +37,12 @@ export default async function Footer() {
   return (
     <footer className="w-full">
       {/* Верхний белый блок */}
-      <div className="bg-white w-full border-t border-gray-200">
+      <div className="bg-cream w-full border-t border-choco/30 rounded-2xl">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {row1.concat(row2).map((group) => (
               <div key={group.title} className="space-y-4">
-                <Text className="block text-sm font-semibold uppercase tracking-wider text-gray-700">
+                <Text className="block text-sm font-semibold uppercase tracking-wider text-choco">
                   {group.title}
                 </Text>
                 <ul className="space-y-2">
@@ -50,7 +50,7 @@ export default async function Footer() {
                     <li key={item.href}>
                       <LocalizedClientLink
                         href={item.href}
-                        className="text-base text-gray-600 hover:text-[#feb9cc] transition-colors duration-200"
+                        className="text-base text-choco/80 hover:text-primary transition-colors duration-200"
                       >
                         {item.name}
                       </LocalizedClientLink>
@@ -64,10 +64,10 @@ export default async function Footer() {
       </div>
 
       {/* Нижний розовый блок */}
-      <div className="bg-[#feb9cc] w-full">
+      <div className="bg-primary w-full">
         <div className="content-container py-16 flex flex-col items-center gap-y-4">
           <h1 className="text-[5rem] font-black leading-none">munchy</h1>
-          <div className="flex items-center gap-x-4 text-gray-800 text-sm">
+          <div className="flex items-center gap-x-4 text-choco text-sm">
             <span>
               © {new Date().getFullYear()} munchy. Все права защищены.
             </span>

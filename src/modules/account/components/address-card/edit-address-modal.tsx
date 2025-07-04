@@ -67,7 +67,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
         className={clx(
           "border rounded-rounded p-5 min-h-[220px] h-full w-full flex flex-col justify-between transition-colors",
           {
-            "border-gray-900": isActive,
+            "border-choco": isActive,
           }
         )}
         data-testid="address-container"
@@ -211,7 +211,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
               />
             </div>
             {formState.error && (
-              <div className="text-rose-500 text-small-regular py-2">
+              <div className="text-primary text-small-regular py-2">
                 {formState.error}
               </div>
             )}

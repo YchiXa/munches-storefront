@@ -5,7 +5,7 @@ import InteractiveLink from "@modules/common/components/interactive-link"
 const EmptyCartMessage = () => {
   return (
     <div
-      className="py-48 px-2 flex flex-col justify-center items-start"
+      className="py-48 px-2 flex flex-col justify-center items-start bg-beige rounded-2xl shadow-lg"
       data-testid="empty-cart-message"
     >
       <Heading
