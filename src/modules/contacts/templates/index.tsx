@@ -8,13 +8,13 @@ import { HttpTypes } from "@medusajs/types"
 
 export default function ContactsTemplate() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[50vh] px-4">
+    <div className="flex flex-col items-center justify-center min-h-[50vh] px-4 bg-beige rounded-2xl shadow-lg">
       <div className="max-w-2xl w-full text-center">
-        <h1 className="text-3xl font-bold mb-8">Контакты</h1>
+        <h1 className="text-3xl font-bold mb-8 text-choco">Контакты</h1>
 
         <div className="space-y-6 text-left">
-          <div className="bg-white p-6 rounded-lg shadow-sm border">
-            <h2 className="text-xl font-semibold mb-4">Свяжитесь с нами</h2>
+          <div className="bg-cream p-6 rounded-2xl shadow-sm border">
+            <h2 className="text-xl font-semibold mb-4 text-choco">Свяжитесь с нами</h2>
 
             <div className="space-y-4">
               <div>
@@ -43,13 +43,13 @@ export default function ContactsTemplate() {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-sm border">
-            <h2 className="text-xl font-semibold mb-4">Обратная связь</h2>
+          <div className="bg-cream p-6 rounded-2xl shadow-sm border">
+            <h2 className="text-xl font-semibold mb-4 text-choco">Обратная связь</h2>
             <p className="text-gray-600 mb-4">
               Если у вас есть вопросы или предложения, мы будем рады их
               услышать. Напишите нам, и мы ответим в ближайшее время.
             </p>
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors">
+            <button className="bg-primary text-white px-6 py-2 rounded-2xl hover:bg-opacity-90 transition-colors">
               Написать нам
             </button>
           </div>

@@ -10,8 +10,8 @@ export default async function Nav() {
   const regions = await listRegions().then((regions: StoreRegion[]) => regions)
 
   return (
-    <div className="sticky top-0 inset-x-0 z-50 bg-[#feb9cc]">
-      <header className="relative mx-auto bg-[#feb9cc]">
+    <div className="sticky top-0 inset-x-0 z-50 bg-primary">
+      <header className="relative mx-auto bg-primary">
         <nav className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           {/* Side menu button */}
           <div className="flex items-center">
@@ -35,7 +35,7 @@ export default async function Nav() {
           <div>
             <LocalizedClientLink
               href="/"
-              className="text-5xl font-fredoka-bold text-black hover:text-rose-800 transition"
+              className="text-5xl font-fredoka-bold text-black hover:text-choco transition"
               data-testid="nav-store-link"
             >
               munchy
