@@ -1,0 +1,17 @@
+node_modules
+.yarn
+.vscode
+.git
+*.log
+coverage
+dist
+.next
+.DS_Store
+*.local
+*.env*
+test
+tests
+__tests__
+*.test.*
+*.spec.*
+README.md 
